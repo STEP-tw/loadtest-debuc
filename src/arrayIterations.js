@@ -164,6 +164,13 @@ function mapList(array){
   }
   return mappedArray;
 }
+function reverse(array){
+  let reversedArray = [];
+  for(let count=array.length-1;count>=0;count--){
+    reversedArray.push(array[count]);
+  }
+  return reversedArray;
+}
 
 exports.selectOdd=selectOdd;
 exports.selectEven=selectEven;
