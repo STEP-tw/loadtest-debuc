@@ -96,24 +96,67 @@ function countAbove(array,givenNumber){
   This function checks if a given list is in descending order or not
 */
 
+function countBelow(array,givenNumber){
+  let aboveCount = 0;
+  for(let count=0;array[count]!=givenNumber;count++){
+    aboveCount++;
+  }
+  return array.length - ++aboveCount;
+}
+
 
 /*
   extractDigits
   This function extracts the digits of a given number and returns a list of digits
 */
 
-
+function findAllOdds(array){
+  let oddCounter = 0;
+  for(let counter = 0;counter<array.length;counter++){
+    if(array[counter]%2 == 1){
+      oddCounter++;
+    }
+  }
+  return oddCounter;
+}
 /*
   countBelowThreshold
   This function provides the count of numbers below given threshold
 */
+function isDecending(array){
+  let checkSmaller = 9999;
+  for(let count=0;count<array.length&&array[count]<=checkSmaller;count++){
+    checkSmaller = array[count];
+  }
+  if(count<array.length){
+    return false;
+  }
+  return true;
+}
 
 
+function extractToArray(number) {
+  let extractedArray = [];
+  let numToString = "" + number;
+  for(let count=0;count<numToString.length;count++){
+    extractedArray.push(+numToString[count]);
+  }
+  return extractedArray;
+}
 /*
   countAboveThreshold
   This function provides the count of numbers above given threshold
 */
-
+function findOdds(odds){
+  let length = odds.length;
+  let newOdds = [];
+  for(let count = 0;count < length;count++){
+    if(odds[count]%2!= 0){
+      newOdds.push(odds[count]);
+    }
+  }
+  return newOdds;
+}
 
 exports.selectOdd=selectOdd;
 exports.selectEven=selectEven;
