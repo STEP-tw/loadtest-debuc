@@ -12,7 +12,11 @@ const selectOdd = function(numberList){
   selectEven
   This function selects all the even numbers from a given list of numbers
 */
-
+const selectEven = function(numberList){
+  return numberList.filter((number)=>{
+    return number % 2 == 0
+  });
+}
 
 /*
   sumUp
