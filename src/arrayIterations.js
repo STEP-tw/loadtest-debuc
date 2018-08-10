@@ -157,6 +157,13 @@ function findOdds(odds){
   }
   return newOdds;
 }
+function mapList(array){
+  let mappedArray = [];
+  for(let count=0;count<array.length;count++){
+    mappedArray.push(array[count].length);
+  }
+  return mappedArray;
+}
 
 exports.selectOdd=selectOdd;
 exports.selectEven=selectEven;
