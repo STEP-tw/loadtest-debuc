@@ -2,6 +2,11 @@
   selectOdd
   This function selects all the odd numbers from a given list of numbers
 */
+const selectOdd = function(numberList){
+  return numberList.filter((number)=>{
+    return number % 2 != 0
+  });
+}
 
 /*
   selectEven
