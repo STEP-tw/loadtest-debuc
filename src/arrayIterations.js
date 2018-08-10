@@ -22,6 +22,11 @@ const selectEven = function(numberList){
   sumUp
   This function sums up all the numbers of a given list
 */
+const sumUp = function(numberList){
+  return numberList.reduce((accumulator, number)=>{
+    return accumulator + number;
+  },0);
+}
 
 
 /*
