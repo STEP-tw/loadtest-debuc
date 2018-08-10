@@ -33,6 +33,18 @@ const sumUp = function(numberList){
   reverseList
   This function reverses the elements of a given list and provides a new list
 */
+function isAscending(array){
+  let checkGreater = -9999;
+  let lengthOfArray=0;
+  for(let count=0;count<array.length&&array[count]>=checkGreater;count++){
+    checkGreater = array[count];
+    lengthOfArray=count;
+  }
+  if(++lengthOfArray<array.length){
+    return false;
+  }
+  return true;
+}
 
 
 /*
@@ -40,6 +52,13 @@ const sumUp = function(numberList){
   This function provides the first n terms of a fibonacci series in reverse order
   This function accepts a single number, n as its only argument.
 */
+function avgList(array){
+  let sum = 0;
+  for(let count = 0;count<array.length;count++){
+    sum = sum + array[count];
+  }
+  return sum/array.length;
+}
 
 /*
   greatestInList
@@ -52,7 +71,13 @@ const sumUp = function(numberList){
   This function provides the lowest number in a list, given a list of numbers
 */
 
-
+function countAbove(array,givenNumber){
+  let aboveCount = 0;
+  for(let count=0;array[count]!=givenNumber;count++){
+    aboveCount++;
+  }
+  return ++aboveCount;
+}
 /*
   mapLengths
   This function provides a list of lengths corresponding to the list of strings
